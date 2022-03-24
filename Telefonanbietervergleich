@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Unbenanntes Dokument</title>	
+
+	<script>
+		
+		function programm() {
+		var vGrundgebuehrA;
+		var vGrundgebuehrB;
+		var vKostenproMinuteA;
+		var vKostenproMinuteB;
+		var vkritischeminutenanzahl;
+		var vMinutenanzahl=0;
+		var vKostenA;
+		var vKostenB;
+		var vAusgabe"";
+		
+	vGrundgebuehrA=document.getelementbyid("idGrundgebuehrA").value;
+	vKostenproMinuteA=document.getelementbyid("idKostenproMinuteA").value;
+	vGrundgebuehrB=document.getelementbyid("idGrundgebuehrB").value;
+	vKostenproMinuteB=document.getelementbyid("idKostenproMinuteB").value;
+		
+		vKritischeMinutenanzahl=(vGrundgebuehrA-vGrundgebuehrB)(vKostenproMinuteB-vKostenproMinuteA);
+		vAusgabe = vAusgabe + " <table border=1";
+		vAusgabe = vAusgabe + "<tr><th>Telefoneinheiten</td><td>GesamtkostenA</td><td>GesamtkostenB</td><td>Besseres Angebot?</td></tr>";	
+		
+		while(Minutenanzahl<=200){
+		vKostenA=vMinutenanzahl*vKostenproMinuteA+vGrundgebuehrA;
+		vKostenB=vMinutenanzahl*vKostenproMinuteB+vGrundgebuehrB;
+		
+		if(vMinutenanzahl==vKritischeMinutenanzahl){
+		   vAusgabe=vAusgabe+"<tr style=color:green><td>"+vMinutenanzahl.tofixed(2)+"</td><td>"+v.toFixed(2)+"</td><td>"
+			
+		}
+			
+			
+			  }
+		}
+	</script>	
+</head>
+<body>
+<h2>Telefonanbietervergleich<h2>
+Grundgebühr Anbieter A: <input id="idGrundgebuehrA" value="10" size="4"> 
+Kosten pro tel. Minute: <input id="idKostenproMinuteA" value="0,05" size="4">
+Grundgebühr AnbieterB: <input id="idGrundgebuehrB" value="5" size="4">
+Kosten pro tel. Minute: <input id="idKostenproMinuteB" value="0,10" size="4">
+ <button onClick="programm();">Generieren</button>
+		<div id="idAusgabe"></div>
+
+
+</body>
+</html>
